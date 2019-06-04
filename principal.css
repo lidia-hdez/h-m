@@ -1,0 +1,123 @@
+#menu-wrapper ul{
+    padding: 0px;
+    list-style: none;
+}
+
+#hmenu > li{
+display:inline-block;
+}
+
+#hmenu >li >a{
+    display: block;
+    padding: 10px 5px;
+    width: 90px;
+}
+
+li ul{
+    position: absolute;
+    display: none;
+}
+
+.sub-menu a{
+    display: block;
+    padding: 10px 5px;
+    width: 130px;
+}
+
+
+#sub-menu a{
+    display: block;
+    padding: 10px 5px;
+    width: 130px;
+}
+
+li:hover ul{
+    display: block;
+}
+
+#menu-wrapper, li ul{
+    background: #000000;
+}
+#hmenu{
+    width: 412px;
+    margin: 0 auto;
+}
+#hmenu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+#hmenu li:hover{
+    background: #f389d9ec;
+    text-shadow:3px 2px 2px #000000;
+}
+#footer{
+padding: 10px;
+font-weight: bolder;
+background-color: #ad64a7;
+}
+.flexslider{
+    width: 100%;
+    position: relative;
+}
+.slides{
+    overflow: hidden;
+}
+.slides img{
+    width: 100%;
+}
+.slides, .flex-control-nav, .flex-direction-nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flex-control-nav{
+    width: 100%;
+    text-align: center;
+}
+.flex-control-nav li{
+    display: inline-block;
+    margin: 0 6px;
+}
+.flex-control-nav li a{
+    display: block;
+    background: #777777;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    text-indent: -9999px;
+}
+.flex-control-nav li a:hover{
+    background: #2E2E2E;
+}
+.flex-control-nav li a.flex-active{
+background: #2E2E2E;
+}
+.flex-direction-nav a{
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.flex-direction-nav .flex-prev{
+    left: 0;
+}
+.flex-direction-nav .flex-next{
+    right: 0;
+}
+.flex-direction-nav a:before{
+    font-family: "flexslider-icon";
+    font-size: 40px;
+    display: inline-block;
+    content: '\f001';
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+.flex-direction-nav a.flex-next:before{
+    content: '\f002';
+}
