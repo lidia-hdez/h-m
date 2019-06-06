@@ -1,12 +1,21 @@
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #49E83F;
+}
 .pi_container{
     min-height: 100vh;
+    display: flex;
 }
 .pi_wrapper img{
 width: 150px;
 }
 .p_item{
-    border-radius: 4px;
-    background-color: white;
+    border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0,0, 0.12), 0 1px 2px rgba(0, 0,0, 0.24);
     width: 150px;
+    font: 15px MingLiU-ExtB;
+    padding: 7px;
+}
+.p_item:hover{
+background: #EDFC7D;
 }
