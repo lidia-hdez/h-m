@@ -1,6 +1,10 @@
+body{
+    background-image: url("file:///C:/Users/lidi_/OneDrive/Im%C3%A1genes/background.jpg");
+    background-repeat: repeat;
+}
 h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #49E83F;
+    color: black;
 }
 .pi_container{
     min-height: 100vh;
@@ -8,6 +12,7 @@ h1{
 }
 .pi_wrapper img{
 width: 150px;
+height: 100px;
 }
 .p_item{
     border-radius: 5px;
@@ -15,6 +20,7 @@ width: 150px;
     width: 150px;
     font: 15px MingLiU-ExtB;
     padding: 7px;
+    background: white;
 }
 .p_item:hover{
 background: #EDFC7D;
