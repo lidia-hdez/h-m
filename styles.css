@@ -25,3 +25,8 @@ height: 100px;
 .p_item:hover{
 background: #EDFC7D;
 }
+.she{
+    border-radius: 15px;
+    color: #620799;
+    background: #65EFFD;
+}
