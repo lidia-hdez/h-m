@@ -1,37 +1,20 @@
 <?php
-$conexion=mysqli_connect("localhost","root","");
+$con=mysqli_connect('localhost','sai','') or die('Error en la conexion servidor');
+$db=mysqli_select_db("hm",$con) or die('Error de conexion');
 
-if(!$conexion){
-    echo"No se pudo conectar con el servidor";
-} else{
-    $base=mysqli_select_db("hm");
-    if(!$base){
-        echo"No se encontro la base de datos";
-    }
-}
+$nombre=$_POST['nombre'];
+$apellido=$_POST['apellido'];
+$correo=$_POST['correo'];
+$telefono=$_POST['telefono'];
+$usuario=$_POST['usuario'];
+$contraseña=$_POST['clave'];
+$sql="INSERT INTO formulario VALUES(null,'".$_POST["nombre"]."','".$_POST["apellido"]."','".$_POST["correo"]."','".$_POST["telefono"]."','".$_POST["usuario"]."','".$_POST["contraseña"]."')"; 
+$resultado=mysqli_query($con,$sql) or die ('Error en el query database');
+mysqli_close($con);
 
-mysqli_select_db("hm",$conexion);
-
-//recuperar las variables
-$nombre=$_POST["nombre"];
-$apellido=$_POST["apellidos"];
-$correo=$_POST["correo"];
-$telefono=$_POST["telefono"];
-$usuario=$_POST["usuario"];
-$contraseña=$_POST["clave"];
-//hacemos la sentencia de sql
-$sql="INSERT INTO formulario VALUES("$nombre",
-                                "$apellido",
-                                "$correo",
-                                "$telefono",
-                                "$usuario",
-                                "$contraseña")";
-//ejecutamos la sentencia de sql
-$ejecutar=mysqli_query($sql);
-//verificamos la ejecucion
-if(!$ejecutar){
-    echo"Hubo algun error";
-} else{
-    echo"Datos guardados correctamente<br><a href='registrate.html'>Volver</a>";
-}
+echo 'El ingresado es: '.$_POST["nombre"].$_POST["apellidos"];
+echo 'El correo es: '.$_POST["correo"];
+echo 'El telefono es: '.$_POST["telefono"];
+echo 'El usuario es: '.$_POST["usuario"];
+echo 'La contraseña es: '.$_POST["clave"];
 ?>
